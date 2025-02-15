@@ -1,0 +1,22 @@
+<div id="makePage" class="page">
+    <h1>マケ計算機</h1>
+    <div class="calculator">
+        <h2>表示値段計算機</h2>
+        <label for="s">設定値段:</label>
+        <input type="number" id="s" name="s"><br>
+        <label for="m">マケ手数料 (%):</label>
+        <input type="number" id="m" name="m" step="0.01"><br>
+        <button onclick="calculateDisplay()">計算</button>
+        <div id="displayResult" class="result"></div>
+    </div>
+    <div class="calculator">
+        <h2>設定値段計算機</h2>
+        <label for="hyouki">表記値段:</label>
+        <input type="number" id="hyouki" name="hyouki"><br>
+        <label for="tesuu">マケ手数料 (%):</label>
+        <input type="number" id="tesuu" name="tesuu" step="0.01"><br>
+        <button onclick="calculateSetting()">計算</button>
+        <div id="settingResult" class="result"></div>
+    </div>
+    <p>上がマケに表記される値段を計算出来る<br>下がマケにこの値段で出したいを出せる</p>
+</div>
