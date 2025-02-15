@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>統合計算ツール</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="darkModeToggle">
+        <label class="switch">
+            <input type="checkbox" id="darkModeSwitch">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div id="pageSelector">
+        <button onclick="showPage('cdPage')">CD計算機</button>
+        <button onclick="showPage('freecrystalPage')">フリークリスタ計算</button>
+        <button onclick="showPage('critsPage')">c率計算機</button>
+        <button onclick="showPage('makePage')">マケ計算機</button>
+        <button onclick="showPage('diaryPage')">日記</button>
+        <button onclick="showPage('expPage')">必要経験値</button>
+    </div>
+
+    <div id="content">
+        <!-- 各ページのコンテンツがここに動的に読み込まれます -->
+    </div>
+
+    <!-- 共通スクリプト -->
+    <script src="js/common.js"></script>
+    <script src="js/darkMode.js"></script>
+    <script src="js/storyData.js"></script>
+    <!-- 各機能のスクリプト -->
+    <script src="js/cdCalculator.js"></script>
+    <script src="js/freeCrystalCalculator.js"></script>
+    <script src="js/criticalCalculator.js"></script>
+    <script src="js/marketCalculator.js"></script>
+    <script src="js/diary.js"></script>
+    <script src="js/expCalculator.js"></script>
+</body>
+</html>
