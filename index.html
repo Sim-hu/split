@@ -23,20 +23,230 @@
         <button onclick="showPage('expPage')">必要経験値</button>
     </div>
 
-    <div id="content">
-        <!-- 各ページのコンテンツがここに動的に読み込まれます -->
+    <!-- CD計算機 -->
+    <div id="cdPage" class="page">
+        <h1>CD計算機</h1>
+        <div class="calculator">
+            <form>
+                <label for="basestr">基礎STR:</label>
+                <input type="number" id="basestr" placeholder="0" value="0" required><br>
+                <label for="strp">STR%:</label>
+                <input type="number" id="strp" placeholder="0" value="0" required><br>
+                <label for="addstr">STR+:</label>
+                <input type="number" id="addstr" placeholder="0" value="0" required><br>
+                <label for="baseagi">基礎AGI:</label>
+                <input type="number" id="baseagi" placeholder="0" value="0" required><br>
+                <label for="agip">AGI%:</label>
+                <input type="number" id="agip" placeholder="0" value="0" required><br>
+                <label for="addagi">AGI+:</label>
+                <input type="number" id="addagi" placeholder="0" value="0" required><br>
+                <label for="addcd">cd固定値:</label>
+                <input type="number" id="addcd" placeholder="0" value="0" required><br>
+                <label for="cdp">cd%:</label>
+                <input type="number" id="cdp" placeholder="0" value="0" required><br>
+                <label for="cupslv">クリティカルupslv</label>
+                <select id="cupslv">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select><br>
+                <label for="kisekislv">神速の軌跡slv:</label>
+                <select id="kisekislv">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select><br>
+                <button type="button" onclick="calculateCD()">計算</button>
+            </form>
+            <div id="cdResult" class="result"></div>
+        </div>
+    </div>
+    <!-- フリークリスタ計算 -->
+    <div id="freecrystalPage" class="page">
+        <h1>フリークリスタ計算</h1>
+        <div class="calculator">
+            <h2>1. タダになる個数から売値を計算</h2>
+            <div>
+                <label for="n1">買った単価 (万円):</label>
+                <input type="number" id="n1" step="0.1" min="0">
+            </div>
+            <div>
+                <label for="m1">購入個数:</label>
+                <input type="number" id="m1" min="0">
+            </div>
+            <div>
+                <label for="t1">タダにしたい個数:</label>
+                <input type="number" id="t1" min="0">
+            </div>
+            <button onclick="calculateStock1()">計算</button>
+            <div id="stockResult1" class="result"></div>
+        </div>
+        <div class="calculator">
+            <h2>2. 売却個数から残りのタダになる個数を計算</h2>
+            <div>
+                <label for="n2">買った単価 (万円):</label>
+                <input type="number" id="n2" step="0.1" min="0">
+            </div>
+            <div>
+                <label for="m2">購入個数:</label>
+                <input type="number" id="m2" min="0">
+            </div>
+            <div>
+                <label for="k2">売却する個数:</label>
+                <input type="number" id="k2" min="0">
+            </div>
+            <button onclick="calculateStock2()">計算</button>
+            <div id="stockResult2" class="result"></div>
+        </div>
     </div>
 
-    <!-- 共通スクリプト -->
+    <!-- c率計算機 -->
+    <div id="critsPage" class="page">
+        <h1>c率計算機</h1>
+        <div class="calculator">
+            <form>
+                <label for="crt">ステcrt:</label>
+                <input type="number" id="crt" placeholder="0" value="0" required><br>
+                <label for="crp">c%:</label>
+                <input type="number" id="crp" placeholder="0" value="0" required><br>
+                <label for="addcr">c固定値:</label>
+                <input type="number" id="addcr" placeholder="0" value="0" required><br>
+                <label for="addcra">c固定値:</label>
+                <input type="number" id="addcra" placeholder="0" value="0" required><br>
+                <label for="addcrb">c固定値:</label>
+                <input type="number" id="addcrb" placeholder="0" value="0" required><br>
+                <label for="addcrc">c固定値:</label>
+                <input type="number" id="addcrc" placeholder="0" value="0" required><br>
+                <label for="addcrd">c固定値:</label>
+                <input type="number" id="addcrd" placeholder="0" value="0" required><br>
+                <button type="button" onclick="calculateCrits()">計算</button>
+            </form>
+            <div id="critsResult" class="result"></div>
+        </div>
+    </div>
+
+    <!-- マケ計算機 -->
+    <div id="makePage" class="page">
+        <h1>マケ計算機</h1>
+        <div class="calculator">
+            <h2>表示値段計算機</h2>
+            <label for="s">設定値段:</label>
+            <input type="number" id="s" name="s"><br>
+            <label for="m">マケ手数料 (%):</label>
+            <input type="number" id="m" name="m" step="0.01"><br>
+            <button onclick="calculateDisplay()">計算</button>
+            <div id="displayResult" class="result"></div>
+        </div>
+        <div class="calculator">
+            <h2>設定値段計算機</h2>
+            <label for="hyouki">表記値段:</label>
+            <input type="number" id="hyouki" name="hyouki"><br>
+            <label for="tesuu">マケ手数料 (%):</label>
+            <input type="number" id="tesuu" name="tesuu" step="0.01"><br>
+            <button onclick="calculateSetting()">計算</button>
+            <div id="settingResult" class="result"></div>
+        </div>
+        <p>上がマケに表記される値段を計算出来る<br>下がマケにこの値段で出したいを出せる</p>
+    </div>
+
+    <!-- 日記 -->
+    <div id="diaryPage" class="page">
+        <h1>冒険者の日記シミュレータ</h1>
+        <div class="update-history">
+            <h2>アップデート履歴</h2>
+            <div class="update-entry">
+                <span class="update-date">2025/1/30</span>
+                <div class="update-content">変異コエヌビアの村追加(118話)</div>
+            </div>
+        </div>
+        <div id="diaryEntries">
+            <div class="diary-entry">
+                <h3>日記 1</h3>
+                <p>
+                    現在レベル: <input type="number" class="currentLevel" min="1" value="250">
+                    現在経験値%: <input type="number" class="currentExpPercentage" min="0" max="100" value="0" step="0.01">
+                </p>
+                <p>
+                    目標レベル: <input type="number" class="targetLevel" min="1" value="290">
+                    目標レベル経験値%: <input type="number" class="targetExpPercentage" min="0" max="100" value="0" step="0.01">
+                </p>
+                <p>
+                    ストーリー開始:
+                    <select class="storyStart"></select>
+                </p>
+                <p>
+                    ストーリー終了:
+                    <select class="storyEnd"></select>
+                </p>
+                <p class="skip77Option hidden">
+                    第77話をスキップする: <input type="checkbox" class="skip77" checked>
+                </p>
+                <button onclick="calculateDiary(this)">計算する</button>
+                <div class="diaryResult result"></div>
+            </div>
+        </div>
+        <button onclick="addDiaryEntry()">日記を追加</button>
+    </div>
+    <!-- 必要経験値 -->
+    <div id="expPage" class="page">
+        <h1>累計必要経験値計算</h1>
+        <div class="calculator">
+            <p>
+                現在のレベル (x): <input type="number" id="currentLevel" min="1" value="1">
+                現在の経験値 (%): <input type="number" id="currentExp" min="0" max="100" value="0" step="0.01">
+            </p>
+            <p>
+                <input type="radio" id="levelIncreaseRadio" name="calculationType" value="levelIncrease" checked>
+                <label for="levelIncreaseRadio">レベル数指定</label>
+                <input type="number" id="levelIncrease" min="0" value="0">
+            </p>
+            <p>
+                <input type="radio" id="targetLevelRadio" name="calculationType" value="targetLevel">
+                <label for="targetLevelRadio">目標レベル指定</label>
+                <input type="number" id="targetLevel" min="1" value="1" disabled>
+            </p>
+            <button onclick="calculateExp()">計算する</button>
+            <p class="result" id="resultRaw"></p>
+            <p class="result" id="resultFormatted"></p>
+        </div>
+    </div>
+
+    <!-- スクリプト -->
+    <script src="js/storyData.js"></script>
     <script src="js/common.js"></script>
     <script src="js/darkMode.js"></script>
-    <script src="js/storyData.js"></script>
-    <!-- 各機能のスクリプト -->
     <script src="js/cdCalculator.js"></script>
     <script src="js/freeCrystalCalculator.js"></script>
     <script src="js/criticalCalculator.js"></script>
     <script src="js/marketCalculator.js"></script>
     <script src="js/diary.js"></script>
     <script src="js/expCalculator.js"></script>
+
+    <script>
+        // 初期表示時にCD計算機を表示
+        window.addEventListener('DOMContentLoaded', (event) => {
+            showPage('cdPage');
+            if (typeof initializeDiaryEntry === 'function') {
+                initializeDiaryEntry();
+            }
+        });
+    </script>
 </body>
 </html>
+    
