@@ -230,11 +230,10 @@
     </div>
 
     <div id="stabilityPage" class="page">
-    <h1>安定率計算機</h1>
-    <div class="calculator">
-        <div class="space-y-4">
+        <h1>安定率計算機</h1>
+        <div class="calculator">
             <div>
-                <label for="weaponType">武器の種類:</label>
+                <label for="weaponType">武器の種類:</label><br>
                 <select id="weaponType">
                     <option value="片手剣">片手剣</option>
                     <option value="両手剣">両手剣</option>
@@ -249,63 +248,71 @@
                     <option value="素手">素手</option>
                 </select>
             </div>
-
+            <br>
+    
             <div>
-                <label for="weaponStability">武器の安定率:</label>
+                <label for="weaponStability">武器の安定率:</label><br>
                 <input type="number" id="weaponStability" value="0">
             </div>
-
+            <br>
+    
             <div id="subWeaponDiv" style="display: none;">
-                <label for="subWeaponStability">サブ武器の安定率:</label>
+                <label for="subWeaponStability">サブ武器の安定率:</label><br>
                 <input type="number" id="subWeaponStability" value="0">
+                <br><br>
             </div>
-
+    
             <div id="arrowStabilityDiv" style="display: none;">
-                <label for="arrowStability">矢の安定率:</label>
+                <label for="arrowStability">矢の安定率:</label><br>
                 <input type="number" id="arrowStability" value="0">
+                <br><br>
             </div>
-
-            <div class="stat-inputs">
-                <div>
-                    <label for="str">STR:</label>
-                    <input type="number" id="str" value="0">
-                </div>
-                <div>
-                    <label for="dex">DEX:</label>
-                    <input type="number" id="dex" value="0">
-                </div>
-                <div>
-                    <label for="agi">AGI:</label>
-                    <input type="number" id="agi" value="0">
-                </div>
-            </div>
-
+    
             <div>
-                <label for="stabilityPercentage">プロパでの安定率(%):</label>
+                <label for="str">STR:</label><br>
+                <input type="number" id="str" value="0">
+            </div>
+            <br>
+    
+            <div>
+                <label for="dex">DEX:</label><br>
+                <input type="number" id="dex" value="0">
+            </div>
+            <br>
+    
+            <div>
+                <label for="agi">AGI:</label><br>
+                <input type="number" id="agi" value="0">
+            </div>
+            <br>
+    
+            <div>
+                <label for="stabilityPercentage">プロパでの安定率(%):</label><br>
                 <input type="number" id="stabilityPercentage" value="0">
             </div>
-
-            <div class="checkbox-group">
-                <div>
-                    <label for="berserk">
-                        <input type="checkbox" id="berserk">
-                        バーサーク使用
-                    </label>
-                </div>
-                <div id="destroyerDiv" style="display: none;">
-                    <label for="destroyer">
-                        <input type="checkbox" id="destroyer">
-                        破壊者使用
-                    </label>
-                </div>
+            <br>
+    
+            <div>
+                <label for="berserk">
+                    <input type="checkbox" id="berserk">
+                    バーサーク使用
+                </label>
             </div>
-
+            <br>
+    
+            <div id="destroyerDiv" style="display: none;">
+                <label for="destroyer">
+                    <input type="checkbox" id="destroyer">
+                    破壊者使用
+                </label>
+                <br><br>
+            </div>
+    
             <button type="button" onclick="calculateStability()">計算する</button>
-
+    
             <div id="stabilityResult" class="result"></div>
         </div>
     </div>
-</div>
 
     <!-- スクリプト -->
     <script src="js/storyData.js"></script>
