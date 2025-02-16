@@ -229,80 +229,88 @@
         </div>
     </div>
 
+    # index.htmlの安定率計算機部分
+    
     <div id="stabilityPage" class="page">
         <h1>安定率計算機</h1>
         <div class="calculator">
             <div>
-                <label for="weaponType">武器の種類:</label><br>
-                <select id="weaponType">
-                    <option value="片手剣">片手剣</option>
-                    <option value="両手剣">両手剣</option>
-                    <option value="双剣">双剣</option>
-                    <option value="弓">弓</option>
-                    <option value="銃">銃</option>
-                    <option value="杖">杖</option>
-                    <option value="メインマグ">メインマグ</option>
-                    <option value="手甲">手甲</option>
-                    <option value="槍">槍</option>
-                    <option value="刀">刀</option>
-                    <option value="素手">素手</option>
-                </select>
+                <label>武器の種類: 
+                    <select id="weaponType">
+                        <option value="片手剣">片手剣</option>
+                        <option value="両手剣">両手剣</option>
+                        <option value="双剣">双剣</option>
+                        <option value="弓">弓</option>
+                        <option value="銃">銃</option>
+                        <option value="杖">杖</option>
+                        <option value="メインマグ">メインマグ</option>
+                        <option value="手甲">手甲</option>
+                        <option value="槍">槍</option>
+                        <option value="刀">刀</option>
+                        <option value="素手">素手</option>
+                    </select>
+                </label>
             </div>
             <br>
     
             <div>
-                <label for="weaponStability">武器の安定率:</label><br>
-                <input type="number" id="weaponStability" value="0">
+                <label>武器の安定率: 
+                    <input type="number" id="weaponStability" value="0">
+                </label>
             </div>
             <br>
     
             <div id="subWeaponDiv" style="display: none;">
-                <label for="subWeaponStability">サブ武器の安定率:</label><br>
-                <input type="number" id="subWeaponStability" value="0">
+                <label>サブ武器の安定率: 
+                    <input type="number" id="subWeaponStability" value="0">
+                </label>
                 <br><br>
             </div>
     
             <div id="arrowStabilityDiv" style="display: none;">
-                <label for="arrowStability">矢の安定率:</label><br>
-                <input type="number" id="arrowStability" value="0">
+                <label>矢の安定率: 
+                    <input type="number" id="arrowStability" value="0">
+                </label>
                 <br><br>
             </div>
     
             <div>
-                <label for="str">STR:</label><br>
-                <input type="number" id="str" value="0">
+                <label>STR: 
+                    <input type="number" id="str" value="0">
+                </label>
             </div>
             <br>
     
             <div>
-                <label for="dex">DEX:</label><br>
-                <input type="number" id="dex" value="0">
+                <label>DEX: 
+                    <input type="number" id="dex" value="0">
+                </label>
             </div>
             <br>
     
             <div>
-                <label for="agi">AGI:</label><br>
-                <input type="number" id="agi" value="0">
+                <label>AGI: 
+                    <input type="number" id="agi" value="0">
+                </label>
             </div>
             <br>
     
             <div>
-                <label for="stabilityPercentage">プロパでの安定率(%):</label><br>
-                <input type="number" id="stabilityPercentage" value="0">
+                <label>プロパでの安定率(%): 
+                    <input type="number" id="stabilityPercentage" value="0">
+                </label>
             </div>
             <br>
     
             <div>
-                <label for="berserk">
-                    バーサーク使用
+                <label>バーサーク: 
                     <input type="checkbox" id="berserk">
                 </label>
             </div>
             <br>
     
             <div id="destroyerDiv" style="display: none;">
-                <label for="destroyer">
-                    破壊者使用
+                <label>破壊者: 
                     <input type="checkbox" id="destroyer">
                 </label>
                 <br><br>
