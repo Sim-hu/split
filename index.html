@@ -229,96 +229,74 @@
         </div>
     </div>
 
-    # index.htmlの安定率計算機部分
-    
     <div id="stabilityPage" class="page">
         <h1>安定率計算機</h1>
-        <div class="calculator">
-            <div>
-                <label>武器の種類: 
-                    <select id="weaponType">
-                        <option value="片手剣">片手剣</option>
-                        <option value="両手剣">両手剣</option>
-                        <option value="双剣">双剣</option>
-                        <option value="弓">弓</option>
-                        <option value="銃">銃</option>
-                        <option value="杖">杖</option>
-                        <option value="メインマグ">メインマグ</option>
-                        <option value="手甲">手甲</option>
-                        <option value="槍">槍</option>
-                        <option value="刀">刀</option>
-                        <option value="素手">素手</option>
-                    </select>
-                </label>
-            </div>
-            <br>
-    
-            <div>
-                <label>武器の安定率: 
-                    <input type="number" id="weaponStability" value="0">
-                </label>
-            </div>
-            <br>
-    
-            <div id="subWeaponDiv" style="display: none;">
-                <label>サブ武器の安定率: 
-                    <input type="number" id="subWeaponStability" value="0">
-                </label>
-                <br><br>
+        <div class="stability-calculator">
+            <div class="calc-row">
+                <span>武器の種類:</span>
+                <select id="weaponType">
+                    <option value="片手剣">片手剣</option>
+                    <option value="両手剣">両手剣</option>
+                    <option value="双剣">双剣</option>
+                    <option value="弓">弓</option>
+                    <option value="銃">銃</option>
+                    <option value="杖">杖</option>
+                    <option value="メインマグ">メインマグ</option>
+                    <option value="手甲">手甲</option>
+                    <option value="槍">槍</option>
+                    <option value="刀">刀</option>
+                    <option value="素手">素手</option>
+                </select>
             </div>
     
-            <div id="arrowStabilityDiv" style="display: none;">
-                <label>矢の安定率: 
-                    <input type="number" id="arrowStability" value="0">
-                </label>
-                <br><br>
+            <div class="calc-row">
+                <span>武器の安定率:</span>
+                <input type="number" id="weaponStability" value="0">
             </div>
     
-            <div>
-                <label>STR: 
-                    <input type="number" id="str" value="0">
-                </label>
+            <div id="subWeaponDiv" class="calc-row" style="display: none;">
+                <span>サブ武器の安定率:</span>
+                <input type="number" id="subWeaponStability" value="0">
             </div>
-            <br>
     
-            <div>
-                <label>DEX: 
-                    <input type="number" id="dex" value="0">
-                </label>
+            <div id="arrowStabilityDiv" class="calc-row" style="display: none;">
+                <span>矢の安定率:</span>
+                <input type="number" id="arrowStability" value="0">
             </div>
-            <br>
     
-            <div>
-                <label>AGI: 
-                    <input type="number" id="agi" value="0">
-                </label>
+            <div class="calc-row">
+                <span>STR:</span>
+                <input type="number" id="str" value="0">
             </div>
-            <br>
     
-            <div>
-                <label>プロパでの安定率(%): 
-                    <input type="number" id="stabilityPercentage" value="0">
-                </label>
+            <div class="calc-row">
+                <span>DEX:</span>
+                <input type="number" id="dex" value="0">
             </div>
-            <br>
     
-            <div>
-                <label>バーサーク: 
-                    <input type="checkbox" id="berserk">
-                </label>
+            <div class="calc-row">
+                <span>AGI:</span>
+                <input type="number" id="agi" value="0">
             </div>
-            <br>
     
-            <div id="destroyerDiv" style="display: none;">
-                <label>破壊者: 
-                    <input type="checkbox" id="destroyer">
-                </label>
-                <br><br>
+            <div class="calc-row">
+                <span>プロパでの安定率(%):</span>
+                <input type="number" id="stabilityPercentage" value="0">
+            </div>
+    
+            <div class="calc-row">
+                <span>バーサーク:</span>
+                <input type="checkbox" id="berserk">
+            </div>
+    
+            <div id="destroyerDiv" class="calc-row" style="display: none;">
+                <span>破壊者:</span>
+                <input type="checkbox" id="destroyer">
             </div>
     
             <button type="button" onclick="calculateStability()">計算する</button>
     
-            <div id="stabilityResult" class="result"></div>
+            <div id="stabilityResult" class="stability-result"></div>
         </div>
     </div>
 
