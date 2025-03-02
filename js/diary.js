@@ -126,7 +126,7 @@ function initializeDiaryEntry() {
     const initialDiaryEntry = document.querySelector('.diary-entry');
     initialDiaryEntry.querySelector('.currentLevel').value = 250;
     initialDiaryEntry.querySelector('.currentExpPercentage').value = 0;
-    initialDiaryEntry.querySelector('.targetLevel').value = 290;
+    initialDiaryEntry.querySelector('.targetLevel').value = 295;
     initialDiaryEntry.querySelector('.targetExpPercentage').value = 0;
     
     const storyStartSelect = initialDiaryEntry.querySelector('.storyStart');
