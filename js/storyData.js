@@ -119,7 +119,7 @@
   { chapter: 14, episode: 118, title: "変異コエヌビアの村", exp: 183900000},         
   { chapter: 14, episode: 119, title: "変異リグシーとの激闘", exp: 189000000},
   { chapter: 15, episode: 120, title: "方舟の危機", exp: 210500000}
-
+];
 
 const CHAPTER_77_INDEX = 76;
 const CHAPTER_78_INDEX = 77;
