@@ -118,7 +118,8 @@
   { chapter: 14, episode: 117, title: "荒くれラーナの王子", exp: 178800000},
   { chapter: 14, episode: 118, title: "変異コエヌビアの村", exp: 183900000},         
   { chapter: 14, episode: 119, title: "変異リグシーとの激闘", exp: 189000000},
-  { chapter: 15, episode: 120, title: "方舟の危機", exp: 210500000}
+  { chapter: 15, episode: 120, title: "方舟の危機", exp: 210500000},
+  { chapter: 15, episode: 121, title: "海岸の攻防", exp: 216300000}
 ];
 
 const CHAPTER_77_INDEX = 76;
