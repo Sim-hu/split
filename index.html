@@ -152,7 +152,7 @@
             <label for="s">設定値段:</label>
             <input type="number" id="s" name="s"><br>
             <label for="m">マケ手数料 (%):</label>
-            <input type="number" id="m" name="m" step="0.01"><br>
+            <input type="number" id="m" name="m" step="0.1"><br>
             <button onclick="calculateDisplay()">計算</button>
             <div id="displayResult" class="result"></div>
         </div>
@@ -161,7 +161,7 @@
             <label for="hyouki">表記値段:</label>
             <input type="number" id="hyouki" name="hyouki"><br>
             <label for="tesuu">マケ手数料 (%):</label>
-            <input type="number" id="tesuu" name="tesuu" step="0.01"><br>
+            <input type="number" id="tesuu" name="tesuu" step="0.1"><br>
             <button onclick="calculateSetting()">計算</button>
             <div id="settingResult" class="result"></div>
         </div>
@@ -183,11 +183,11 @@
                 <h3>日記 1</h3>
                 <p>
                     現在レベル: <input type="number" class="currentLevel" min="1" value="250">
-                    現在経験値%: <input type="number" class="currentExpPercentage" min="0" max="100" value="0" step="0.01">
+                    現在経験値%: <input type="number" class="currentExpPercentage" min="0" max="100" value="0" step="1">
                 </p>
                 <p>
-                    目標レベル: <input type="number" class="targetLevel" min="1" value="300">
-                    目標レベル経験値%: <input type="number" class="targetExpPercentage" min="0" max="100" value="0" step="0.01">
+                    目標レベル: <input type="number" class="targetLevel" min="1" value="305">
+                    目標レベル経験値%: <input type="number" class="targetExpPercentage" min="0" max="100" value="0" step="1">
                 </p>
                 <p>
                     ストーリー開始:
@@ -212,7 +212,7 @@
         <div class="calculator">
             <p>
                 現在のレベル (x): <input type="number" id="currentLevel" min="1" value="1">
-                現在の経験値 (%): <input type="number" id="currentExp" min="0" max="100" value="0" step="0.01">
+                現在の経験値 (%): <input type="number" id="currentExp" min="0" max="100" value="0" step="1">
             </p>
             <p>
                 <input type="radio" id="levelIncreaseRadio" name="calculationType" value="levelIncrease" checked>
@@ -294,11 +294,11 @@
         <div class="calculator">
             <p>
                 現在のレベル: <input type="number" id="soulCurrentLevel" min="1" value="1">
-                現在の経験値 (%): <input type="number" id="soulCurrentExp" min="0" max="100" value="0" step="0.01">
+                現在の経験値 (%): <input type="number" id="soulCurrentExp" min="0" max="100" value="0" step="1">
             </p>
             <p>
-                目標レベル: <input type="number" id="soulTargetLevel" min="1" value="300">
-                目標レベル経験値 (%): <input type="number" id="soulTargetExp" min="0" max="100" value="0" step="0.01">
+                目標レベル: <input type="number" id="soulTargetLevel" min="1" value="305">
+                目標レベル経験値 (%): <input type="number" id="soulTargetExp" min="0" max="100" value="0" step="1">
             </p>
             <button onclick="calculateSoul()">計算する</button>
             <div class="result">
